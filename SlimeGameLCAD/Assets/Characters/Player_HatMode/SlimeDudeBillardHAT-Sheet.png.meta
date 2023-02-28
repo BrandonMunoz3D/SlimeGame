@@ -1,0 +1,1024 @@
+fileFormatVersion: 2
+guid: b0549a8f12f7dea428662decaaca20f8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f509ff3544894649889a2c6454200fc
+      internalID: 838682049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 440
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cd1543c36358f478c2005795cee329
+      internalID: 1856230480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 440
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6991ea19090c9044a97ad803eca34c00
+      internalID: -1349661103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 440
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1769b92d9ab72c14186cb29fddc34943
+      internalID: 407951465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 440
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e7bc53cf2d42e4fab7d13d566df944
+      internalID: 81222867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 440
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85910578b97d87a4382277ba990a0687
+      internalID: -708999464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 440
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f549e915b71e89d49ae760ef17714570
+      internalID: -1280075771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e23c5a8378e9d48aa480fd6e7706aa
+      internalID: 1405770314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 368
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da2a5b9dce96bb49b73d0ccb66a164f
+      internalID: 92400677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 368
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6e1ffe69e4356469e59cc774682cc7
+      internalID: -545448353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 368
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369db0f80a9a37142baf6950ceb67595
+      internalID: -472707177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 368
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff82fd2b5c35af4d81bb30c0b9a500e
+      internalID: 584374442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 368
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a6d3f50dccae3429bf01c3eeb527d4
+      internalID: -803205622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 368
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353bbec11a27e18428a1733103100f5f
+      internalID: 1907155952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 296
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8bb9ca1f039ac41911ca06e08ab2ee
+      internalID: 327870801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 296
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea15f9a7dc8aab14787ce7c9eb36d77d
+      internalID: 310038776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 296
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f295e2bbf75eb774ab0e0d1f61cfffa5
+      internalID: 370395178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 296
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f492e8a86b0c8e84e9b22dcefd8c313f
+      internalID: 819822702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 296
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e1f19f36148c54dbc08e27be4ff849
+      internalID: 610086101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 296
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caab8ad643b57ca49bcdeb2b27a77b0f
+      internalID: -2146170405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 296
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e53a2bb4a97757459addfcfad9cc24d
+      internalID: 672271115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd5b1398f5f7c148b0ffa678f0ca49d
+      internalID: -1196487578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 224
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c15994ce035784f984b57607c2f76a
+      internalID: 1601974862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c757b903b495948bb782f28ea7b514
+      internalID: 1565628960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 224
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6c8455c07c4fc47bf49deb6ba564e1
+      internalID: 562214510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09023fb9dac147d4cb4098a891d0c381
+      internalID: -837678004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 224
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbdb91c917bbd9e458d0ddaeebcc2a11
+      internalID: 1915027722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 224
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb5f72102b40014aa45c8280276494f
+      internalID: 661641627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c562118321d441a45a0d462d3c2b99e7
+      internalID: 189741434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 152
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495263ace46c94841910a0d6bf795adc
+      internalID: -1943325787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 152
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a293b9b8c994e548a7681b36dfa2164
+      internalID: 1484642310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 152
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e47f864435b154cbc7a74059258910
+      internalID: 557382445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 152
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f1b308dffda1e47be5597caa52a415
+      internalID: 1592552392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 152
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8266a16fbfd9b5d42ac8b234233e9135
+      internalID: -285796031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 152
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152f09e0d4e01fd46a4517dd4694f5c9
+      internalID: -671159195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507ef418aa5943c48a8f3609d916b2c0
+      internalID: -400237499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 80
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfc90fb85a3e654b806cb5829752322
+      internalID: 774545953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254e45c48a078c14aa73f600adc35726
+      internalID: -1964300445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 80
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e4a3ae5d2de76419b7f3c09255cc7d
+      internalID: -2077618713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4771a4ce2fecaf545867973c39735a49
+      internalID: -542050342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDudeBillardHAT-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 80
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e60be075abbdd4ea540318e608e56f
+      internalID: 463601876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SlimeDudeBillardHAT-Sheet_22: 1601974862
+      SlimeDudeBillardHAT-Sheet_5: -708999464
+      SlimeDudeBillardHAT-Sheet_15: 310038776
+      SlimeDudeBillardHAT-Sheet_27: 661641627
+      SlimeDudeBillardHAT-Sheet_18: 610086101
+      SlimeDudeBillardHAT-Sheet_3: 407951465
+      SlimeDudeBillardHAT-Sheet_38: -2077618713
+      SlimeDudeBillardHAT-Sheet_33: -285796031
+      SlimeDudeBillardHAT-Sheet_16: 370395178
+      SlimeDudeBillardHAT-Sheet_20: 672271115
+      SlimeDudeBillardHAT-Sheet_29: -1943325787
+      SlimeDudeBillardHAT-Sheet_23: 1565628960
+      SlimeDudeBillardHAT-Sheet_40: 463601876
+      SlimeDudeBillardHAT-Sheet_21: -1196487578
+      SlimeDudeBillardHAT-Sheet_13: 1907155952
+      SlimeDudeBillardHAT-Sheet_24: 562214510
+      SlimeDudeBillardHAT-Sheet_17: 819822702
+      SlimeDudeBillardHAT-Sheet_28: 189741434
+      SlimeDudeBillardHAT-Sheet_36: 774545953
+      SlimeDudeBillardHAT-Sheet_31: 557382445
+      SlimeDudeBillardHAT-Sheet_2: -1349661103
+      SlimeDudeBillardHAT-Sheet_8: 92400677
+      SlimeDudeBillardHAT-Sheet_35: -400237499
+      SlimeDudeBillardHAT-Sheet_10: -472707177
+      SlimeDudeBillardHAT-Sheet_0: 838682049
+      SlimeDudeBillardHAT-Sheet_32: 1592552392
+      SlimeDudeBillardHAT-Sheet_1: 1856230480
+      SlimeDudeBillardHAT-Sheet_7: 1405770314
+      SlimeDudeBillardHAT-Sheet_14: 327870801
+      SlimeDudeBillardHAT-Sheet_12: -803205622
+      SlimeDudeBillardHAT-Sheet_11: 584374442
+      SlimeDudeBillardHAT-Sheet_30: 1484642310
+      SlimeDudeBillardHAT-Sheet_26: 1915027722
+      SlimeDudeBillardHAT-Sheet_37: -1964300445
+      SlimeDudeBillardHAT-Sheet_25: -837678004
+      SlimeDudeBillardHAT-Sheet_4: 81222867
+      SlimeDudeBillardHAT-Sheet_19: -2146170405
+      SlimeDudeBillardHAT-Sheet_34: -671159195
+      SlimeDudeBillardHAT-Sheet_39: -542050342
+      SlimeDudeBillardHAT-Sheet_6: -1280075771
+      SlimeDudeBillardHAT-Sheet_9: -545448353
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
