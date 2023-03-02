@@ -12,32 +12,25 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     public float jumpForce;
     private float movement;
 
-    private bool isGrounded;
+    public bool isGrounded;
+    
    
     public LayerMask platformLayerMask;
     private bool RIGHTfacing;
-
-    private int extraJumps;
-    public int extraJumpsValue;
+    public float checkRadius;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        extraJumps = extraJumpsValue;
     }
     // Update is called once per frame
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
 
-        //Player movement
-        myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
-
-        anim.SetFloat("speed", Mathf.Abs(myRigidbody.velocity.x));
-        anim.SetFloat("vertical velocity", myRigidbody.velocity.y);
-
+        //animations
         if (movement == 0)
         {
             anim.Play("idle");
@@ -55,42 +48,72 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         {
             FLip();
         }
+    }
+
+    void FixedUpdate()
+    {
+        
+
+        //Player movement
+        myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
+
+        //anim.SetFloat("speed", Mathf.Abs(myRigidbody.velocity.x));
+        //anim.SetFloat("vertical velocity", myRigidbody.velocity.y);
+
+        isGrounded = Physics2D.OverlapCircle(gameObject.transform.position, checkRadius, platformLayerMask);
 
         //jumping animation
         if (Input.GetAxis("Jump") > 0 && isGrounded)
         {
+
             anim.Play("jumping");
             myRigidbody.velocity = new Vector2(0, jumpForce);
             Debug.Log("jumping");
-        }
-
-
-    }
-
-    private void FixedUpdate()
-    {
-        GroundCheck();
-    }
-
-
-
-    private void GroundCheck()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, .1f, platformLayerMask);
-
-        // ray checks for tagged "Ground"
-        if (hit.collider != null)
-        {
-            isGrounded = true;
-        }
-        else
-        {
             isGrounded = false;
         }
 
-        // Set "IsGrounded" bool in the Animator to match the value of the "isGrounded" bool above
-        anim.SetBool("isGrounded", isGrounded);
+        //second jump- if(input.getaxis("jump") && isGrounded)
+        //anim.Play("jumping");
+        //myRigidbody.velocity = new Vector2(0, jumpForce);
+        //Debug.Log("jumping");
+        //isGrounded = false;
+        //{ if ( doubleJump == true)
+        //{ myRigidbody.velocity = new Vector2(0,jumpForce);
+        //double jump = false;
+        //}
+        //check physics overlap to resset double jump to true
+
+        //TOSCRIPT: once you collect cowboy hat, movement is disabled and slime disappears
+        //cowboy hat disappears on contact
     }
+
+
+
+    //private void GroundCheck()
+    
+    //{
+    //    RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, Vector2.down, .5f, platformLayerMask);
+
+    //    // ray checks for tagged "Ground"
+    //    if (hit.collider != null)
+    //    {
+    //        Debug.Log("collider hit");
+    //        if (hit.transform.CompareTag("Ground"))
+    //        {
+    //            Debug.Log("hit ground");
+    //            isGrounded = true;
+    //        }
+    //    }
+    //    else if (hit.collider == null)
+    //    {
+    //        Debug.Log("not grounded");
+    //        isGrounded = false;
+    //    }
+
+
+    //    // Set "IsGrounded" bool in the Animator to match the value of the "isGrounded" bool above
+    //    //anim.SetBool("isGrounded", isGrounded);
+    //}
 
     void FLip()
     {
