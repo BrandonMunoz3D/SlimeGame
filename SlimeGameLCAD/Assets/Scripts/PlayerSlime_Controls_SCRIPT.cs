@@ -17,19 +17,20 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     public LayerMask platformLayerMask;
     private bool RIGHTfacing;
 
+    private int extraJumps;
+    public int extraJumpsValue;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-
+        extraJumps = extraJumpsValue;
     }
-
     // Update is called once per frame
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
-
 
         //Player movement
         myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
@@ -44,7 +45,6 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         else
         {
             anim.Play("running");
-            Debug.Log("running");
         }
         //facing directions
         if (RIGHTfacing == false && movement < 0)
@@ -57,13 +57,13 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         }
 
         //jumping animation
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetAxis("Jump") > 0 && isGrounded)
         {
             anim.Play("jumping");
             myRigidbody.velocity = new Vector2(0, jumpForce);
+            Debug.Log("jumping");
         }
 
-        
 
     }
 
