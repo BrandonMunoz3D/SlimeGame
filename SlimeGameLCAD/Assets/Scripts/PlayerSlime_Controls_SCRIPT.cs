@@ -13,16 +13,18 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     private float movement;
 
     public bool isGrounded;
-    
-   
+ 
     public LayerMask platformLayerMask;
     private bool RIGHTfacing;
     public float checkRadius;
 
+    PlayerSlime_Abilities_SCRIPT ability;
+
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         anim = GetComponent<Animator>();
+        ability = GetComponent<PlayerSlime_Abilities_SCRIPT>();
         myRigidbody = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
@@ -30,16 +32,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     {
         movement = Input.GetAxis("Horizontal");
 
-        //animations
-        if (movement == 0)
-        {
-            anim.Play("idle");
-        }
-        else
-        {
-            anim.Play("running");
-        }
-        //facing directions
+        //Facing directions
         if (RIGHTfacing == false && movement < 0)
         {
             FLip();
@@ -49,73 +42,39 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
             FLip();
         }
 
+        //Set grounded
         isGrounded = Physics2D.OverlapCircle(gameObject.transform.position, checkRadius, platformLayerMask);
-        
-        //Player movement
-        myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
+        anim.SetBool("isGrounded", isGrounded);
 
-        //anim.SetFloat("speed", Mathf.Abs(myRigidbody.velocity.x));
-        //anim.SetFloat("vertical velocity", myRigidbody.velocity.y);
+        //Set speed
+        anim.SetFloat("speed", Mathf.Abs(myRigidbody.velocity.x));
 
-
-
-        //jumping animation
-        if (Input.GetAxis("Jump") > 0 && isGrounded)
-        {
-
-            anim.Play("jumping");
-            myRigidbody.velocity = new Vector2(0, jumpForce);
-            Debug.Log("jumping");
-            isGrounded = false;
+        //Double Jump Ability
+        if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.DoubleJump) {
+            // TODO DOUBLE JUMP LOGIC
         }
+
+        //Freeze Ability
+        if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.Freeze) {
+            // TODO FREEZE LOGIC
+        }
+
+        //Stomp Ability
+        if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.Stomp) {
+            // TODO STOMP LOGIC
+        } 
     }
 
     void FixedUpdate()
     {
-        
+        //Player movement
+        myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
 
-        //second jump- if(input.getaxis("jump") && isGrounded)
-        //anim.Play("jumping");
-        //myRigidbody.velocity = new Vector2(0, jumpForce);
-        //Debug.Log("jumping");
-        //isGrounded = false;
-        //{ if ( doubleJump == true)
-        //{ myRigidbody.velocity = new Vector2(0,jumpForce);
-        //double jump = false;
-        //}
-        //check physics overlap to resset double jump to true
-
-        //TOSCRIPT: once you collect cowboy hat, movement is disabled and slime disappears
-        //cowboy hat disappears on contact
+        //jumping animation
+        if (Input.GetAxis("Jump") > 0 && isGrounded) {
+            myRigidbody.velocity = new Vector2(0, jumpForce);
+        }
     }
-
-
-
-    //private void GroundCheck()
-    
-    //{
-    //    RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, Vector2.down, .5f, platformLayerMask);
-
-    //    // ray checks for tagged "Ground"
-    //    if (hit.collider != null)
-    //    {
-    //        Debug.Log("collider hit");
-    //        if (hit.transform.CompareTag("Ground"))
-    //        {
-    //            Debug.Log("hit ground");
-    //            isGrounded = true;
-    //        }
-    //    }
-    //    else if (hit.collider == null)
-    //    {
-    //        Debug.Log("not grounded");
-    //        isGrounded = false;
-    //    }
-
-
-    //    // Set "IsGrounded" bool in the Animator to match the value of the "isGrounded" bool above
-    //    //anim.SetBool("isGrounded", isGrounded);
-    //}
 
     void FLip()
     {
