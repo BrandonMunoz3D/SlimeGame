@@ -48,19 +48,16 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         {
             FLip();
         }
-    }
 
-    void FixedUpdate()
-    {
+        isGrounded = Physics2D.OverlapCircle(gameObject.transform.position, checkRadius, platformLayerMask);
         
-
         //Player movement
         myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
 
         //anim.SetFloat("speed", Mathf.Abs(myRigidbody.velocity.x));
         //anim.SetFloat("vertical velocity", myRigidbody.velocity.y);
 
-        isGrounded = Physics2D.OverlapCircle(gameObject.transform.position, checkRadius, platformLayerMask);
+
 
         //jumping animation
         if (Input.GetAxis("Jump") > 0 && isGrounded)
@@ -71,6 +68,11 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
             Debug.Log("jumping");
             isGrounded = false;
         }
+    }
+
+    void FixedUpdate()
+    {
+        
 
         //second jump- if(input.getaxis("jump") && isGrounded)
         //anim.Play("jumping");

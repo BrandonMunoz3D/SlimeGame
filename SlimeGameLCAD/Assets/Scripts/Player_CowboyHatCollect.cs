@@ -5,10 +5,10 @@ using UnityEngine;
 public class Player_CowboyHatCollect : MonoBehaviour
 {
     private Rigidbody2D myRigidbody;
-
+    private BoxCollider2D collider;
 
     public int hat;
-    private bool hatobtained;
+    public bool hatobtained;
 
     public GameObject regularSlime;
     public GameObject cowboySlime;
@@ -16,31 +16,43 @@ public class Player_CowboyHatCollect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        myRigidbody = GetComponent<Rigidbody2D>();
+        collider = GetComponent<BoxCollider2D>();
+
+
+        //disabling the cowboy from the start.
+        regularSlime.GetComponent<PlayerSlime_Controls_SCRIPT>().enabled = true;
+        cowboySlime.GetComponent<PlayerSlime_Controls_SCRIPT>().enabled = false;
+        cowboySlime.GetComponent<BoxCollider2D>().enabled = false;
+        cowboySlime.gameObject.SetActive(false);
+        //disable rigidbody somehow
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if other slime collects hat, disappears, 
+        //if regslime collects hat, slime disappears, hat disappears...
+        // reg slime movement disabled, collision disabled
         //cowboy slime movement enabled, cowboy slime appears
+        if (hatobtained == true)
+        {
+            regularSlime.GetComponent<PlayerSlime_Controls_SCRIPT>().enabled = false;
+            regularSlime.GetComponent<BoxCollider2D>().enabled = false;
+            cowboySlime.GetComponent<PlayerSlime_Controls_SCRIPT>().enabled = true;
+            cowboySlime.GetComponent<BoxCollider2D>().enabled = true;
 
+            //enable cowboy slime rigidbody
+            regularSlime.gameObject.SetActive(false);
+            cowboySlime.SetActive(true);
+            regularSlime.gameObject.SetActive(false);
+            cowboySlime.gameObject.SetActive(true);
+        }
         //item disappears on contact
         //void has hat(has hat screen yay, scene change, player has hat)
 
     }
 
-    void hasHat()
-    {
-        if(hatobtained == true)
-        {
-            regularSlime.GetComponent<PlayerSlime_Controls_SCRIPT>().enabled = false;
-            cowboySlime.GetComponent<PlayerSlime_Controls_SCRIPT>().enabled = true;
-            Destroy(regularSlime.gameObject);
-        }
-        
-        //slime disappear, movement disabled
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -48,11 +60,15 @@ public class Player_CowboyHatCollect : MonoBehaviour
         { 
             hatobtained = true;
             Destroy(collision.gameObject);
-            Debug.Log("HAT OBTAINED!!!");
-
+            Debug.Log("YEEEEHAW");
             
         }
         
     }
-   
+    void DisappearSlime()
+    {
+        regularSlime.SetActive(false);
+    }
+
+
 }
