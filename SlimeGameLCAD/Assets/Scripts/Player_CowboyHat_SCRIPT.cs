@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_CowboyHatCollect : MonoBehaviour
+public class Player_CowboyHat_SCRIPT : MonoBehaviour
 {
     private Rigidbody2D myRigidbody;
     private BoxCollider2D collider;
