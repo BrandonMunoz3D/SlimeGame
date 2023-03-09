@@ -256,7 +256,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1836120431684336037, guid: e39b01c2c1ad2c84c941930fb46198e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -482,7 +482,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -7088386964207081759, guid: a396b327a1db31e43ba1967ca54ab694, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1137,9 +1137,10 @@ GameObject:
   - component: {fileID: 1733851467}
   - component: {fileID: 1733851466}
   - component: {fileID: 1733851469}
-  m_Layer: 0
+  - component: {fileID: 1733851470}
+  m_Layer: 3
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1249,10 +1250,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 2091549453}
   dialogueText: {fileID: 1698406169}
-  nohatdialogue:
+  nohatDialogue:
   - Hey there!
-  - WHERE IS YOUR HAT SIR???????????
-  - GRRRR...
+  - WHERE IS YOUR HAT SIR?????
+  - GRRRRR.....
+  hat: {fileID: 147959866}
+  hashat: 0
+  hatDialogue:
+  - Howdy partner!
+  - I see you've got a hat right there!
+  - Welcome to the party!
+  wordSpeed: 0.02
+  proximityNpc: 0
+--- !u!114 &1733851470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733851465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb4486e115be5c4ab24d884c498c783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 2091549453}
+  dialogueText: {fileID: 1698406169}
+  hatDialogue:
+  - Howdy partner!
+  - I see you got yourself a fine lookin' hat there!
+  - Come on and join the party!
+  hat: {fileID: 147959866}
+  hashat: 0
   wordSpeed: 0.02
   proximityNpc: 0
 --- !u!1 &2091549453

@@ -4,24 +4,22 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class NPC_Chatting_SCRIPT : MonoBehaviour
+public class HatObtained_NPC_SCRIPT : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
-    public string[] nohatDialogue;
     private int index;
-    
+    public string[] hatDialogue;
+
     public GameObject hat;
     public bool hashat;
-    public string[] hatDialogue;
 
     public float wordSpeed;
     public bool proximityNpc;
-
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && proximityNpc && !hashat)
+        if (Input.GetKeyDown(KeyCode.E) && proximityNpc && hashat)
         {
             if (!dialoguePanel.activeInHierarchy)
             {
@@ -29,11 +27,12 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
                 //enumerator typing effect
                 StartCoroutine(Typing());
             }
-            else if (dialogueText.text == nohatDialogue[index])
+            else if (dialogueText.text == hatDialogue[index])
             {
                 NextLine();
             }
         }
+
     }
     public void zeroText()
     {
@@ -45,18 +44,18 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
     //Typing effect
     IEnumerator Typing()
     {
-        foreach (char letter in nohatDialogue[index].ToCharArray())
+        foreach (char letter in hatDialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
-        
+
 
     }
 
     public void NextLine()
     {
-        if (index < nohatDialogue.Length - 1)
+        if (index < hatDialogue.Length - 1)
         {
             index++;
             dialogueText.text = "";
@@ -71,7 +70,7 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
     //if close or not close to npc
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             proximityNpc = true;
         }
@@ -89,11 +88,10 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
             zeroText();
         }
 
-        if ( collision.CompareTag("CowboyHat"))
+        if (collision.CompareTag("CowboyHat"))
         {
             hashat = false;
         }
     }
-
 
 }
