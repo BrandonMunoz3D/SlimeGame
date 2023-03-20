@@ -16,6 +16,9 @@ public class HatObtained_NPC_SCRIPT : MonoBehaviour
 
     public float wordSpeed;
     public bool proximityNpc;
+
+    public GameObject Slime;
+
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +35,6 @@ public class HatObtained_NPC_SCRIPT : MonoBehaviour
                 NextLine();
             }
         }
-
     }
     public void zeroText()
     {
@@ -49,8 +51,6 @@ public class HatObtained_NPC_SCRIPT : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
-
-
     }
 
     public void NextLine()
@@ -93,5 +93,10 @@ public class HatObtained_NPC_SCRIPT : MonoBehaviour
             hashat = false;
         }
     }
+
+    //private void Ascend()
+    //{
+    //    Slime.transform.vertical?
+    //}
 
 }

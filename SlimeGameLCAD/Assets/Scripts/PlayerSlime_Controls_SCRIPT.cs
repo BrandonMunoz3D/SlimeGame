@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public Animator anim;
+    public GameObject dialoguePanel;
 
     public float speed;
     public float jumpForce;
@@ -17,6 +21,8 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     public LayerMask platformLayerMask;
     private bool RIGHTfacing;
     public float checkRadius;
+
+    public GameObject restartMenu;
 
     PlayerSlime_Abilities_SCRIPT ability;
 
@@ -41,6 +47,11 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         {
             FLip();
         }
+        //lock player movement when speakking
+        if (dialoguePanel.activeInHierarchy)
+        {
+            movement = 0;
+        }
 
         //Set grounded
         isGrounded = Physics2D.OverlapCircle(gameObject.transform.position, checkRadius, platformLayerMask);
@@ -64,6 +75,12 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.Stomp) {
             // TODO STOMP LOGIC
         } */
+        
+        //restart button
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            restartMenu.SetActive(true);
+        }
     }
 
     void FixedUpdate()
@@ -80,9 +97,24 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     void FLip()
     {
         RIGHTfacing = !RIGHTfacing;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+
+        //rotates player on y-axis
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    //presss Yes/No in restart menu activates these
+    public void Restart()
+    {
+        //how to play restart animation?
+        anim.Play("restart");
+        Debug.Log("Restarting");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        restartMenu.SetActive(false);
+    }
+    public void noRestart()
+    {
+        Debug.Log("not Restarting");
+        restartMenu.SetActive(false);
     }
 
 }
