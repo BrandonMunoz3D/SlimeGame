@@ -17,6 +17,7 @@ public class Player_CowboyHat_SCRIPT : MonoBehaviour
     public float hatLocation;
 
     public TextMeshProUGUI restartQ;
+    public GameObject restartMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,9 @@ public class Player_CowboyHat_SCRIPT : MonoBehaviour
             //recenter hat on Slime 
             hat.transform.localPosition = new Vector3 (0,hatLocation,0);
 
+            Invoke("winning", 1);
+
+            Invoke("winningRestart", 2.5f);
         }
     }
 
@@ -61,8 +65,43 @@ public class Player_CowboyHat_SCRIPT : MonoBehaviour
         //how to play restart animation? for a bit, then restart game?
         anim.Play("restart");
         Debug.Log("Restarting");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        hat.transform.parent = regularSlime.transform;
+        hat.transform.localPosition = new Vector3(0, hatLocation, 0);
         //something to restart slime with hat
     }
 
+    public void winning()
+    {
+        anim.Play("win");
+    }
 
+    public void winningRestart()
+    {
+        restartMenu.SetActive(true);
+        restartQ.text = "Restart with Hat?";
+    }
+
+    public void Restart()
+    {
+        //how to play restart animation?
+        anim.Play("restart");
+        Debug.Log("Restarting");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        restartMenu.SetActive(false);
+        //makes hat child of regularSlime
+        hat.transform.parent = regularSlime.transform;
+
+        //recenter hat on Slime 
+        hat.transform.localPosition = new Vector3(0, hatLocation, 0);
+    }
+    public void noRestart()
+    {
+        Debug.Log("not Restarting");
+        restartMenu.SetActive(false);
+    }
 }

@@ -50,8 +50,6 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
-        
-
     }
 
     public void NextLine()
