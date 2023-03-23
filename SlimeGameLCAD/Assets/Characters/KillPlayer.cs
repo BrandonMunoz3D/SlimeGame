@@ -3,12 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KillPlayer : MonoBehaviour {
-	[SerializeField]Transform spawnPoint;
 
+	public GameObject player;
+	public Transform respawnPoint;
+	//Start is called before the first frame update
+	void start()
+    {
 
-	void OnCollisionEnter2D(Collision2D col)
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        
+    }
+    private void OnCollisionEnter2D(Collision2D other)
 	{
-		if(col.transform.CompareTag("Player"))
-			col.transform.position = spawnPoint.position;
+		if(other.gameObject.CompareTag("Player"))
+        {
+            player.transform.position = respawnPoint.position;
+        }
 	}
 }
