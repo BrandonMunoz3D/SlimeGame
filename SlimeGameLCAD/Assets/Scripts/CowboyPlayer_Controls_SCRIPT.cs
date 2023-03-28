@@ -5,8 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
-public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
+public class CowboyPlayer_Controls_SCRIPT : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public Animator anim;
@@ -17,21 +16,31 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     private float movement;
 
     public bool isGrounded;
- 
+
     public LayerMask platformLayerMask;
     private bool RIGHTfacing;
     public float checkRadius;
 
     public GameObject restartMenu;
 
+    public GameObject regularSlime;
+    public GameObject hat;
+    public float hatLocation;
+
     PlayerSlime_Abilities_SCRIPT ability;
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
         anim = GetComponent<Animator>();
         ability = GetComponent<PlayerSlime_Abilities_SCRIPT>();
         myRigidbody = GetComponent<Rigidbody2D>();
+
+        //makes hat child of regularSlime
+        hat.transform.parent = regularSlime.transform;
+
+        //recenter hat on Slime 
+        hat.transform.localPosition = new Vector3(0, hatLocation, 0);
     }
     // Update is called once per frame
     void Update()
@@ -75,7 +84,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.Stomp) {
             // TODO STOMP LOGIC
         } */
-        
+
         //restart button
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -89,7 +98,8 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
 
         //jumping animation
-        if (Input.GetAxis("Jump") > 0 && isGrounded) {
+        if (Input.GetAxis("Jump") > 0 && isGrounded)
+        {
             myRigidbody.velocity = new Vector2(0, jumpForce);
         }
     }
@@ -116,6 +126,4 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         Debug.Log("not Restarting");
         restartMenu.SetActive(false);
     }
-
 }
-

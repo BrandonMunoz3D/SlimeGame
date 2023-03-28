@@ -13,10 +13,10 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
     
     public GameObject hat;
     public bool hashat;
-    public string[] hatDialogue;
 
     public float wordSpeed;
     public bool proximityNpc;
+
 
     // Update is called once per frame
     void Update()
@@ -50,8 +50,6 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
-        
-
     }
 
     public void NextLine()
