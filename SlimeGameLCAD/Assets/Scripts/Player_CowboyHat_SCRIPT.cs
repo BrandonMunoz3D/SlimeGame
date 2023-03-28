@@ -86,18 +86,14 @@ public class Player_CowboyHat_SCRIPT : MonoBehaviour
 
     public void Restart()
     {
-        //how to play restart animation?
+        //play restart animation
         anim.Play("restart");
         Debug.Log("Restarting");
 
+        //CHANGE THIS LINE'S SCENE!!!!! to "scene 2": scene begins with cowboy hat
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         restartMenu.SetActive(false);
-        //makes hat child of regularSlime
-        hat.transform.parent = regularSlime.transform;
-
-        //recenter hat on Slime 
-        hat.transform.localPosition = new Vector3(0, hatLocation, 0);
     }
     public void noRestart()
     {
