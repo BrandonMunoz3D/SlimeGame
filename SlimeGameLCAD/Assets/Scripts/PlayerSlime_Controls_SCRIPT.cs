@@ -16,6 +16,11 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     public float jumpForce;
     private float movement;
 
+    //public bool doubleJump;
+    public bool jump; 
+    public int timesJumped;
+
+
     public bool isGrounded;
  
     public LayerMask platformLayerMask;
@@ -81,6 +86,19 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         {
             restartMenu.SetActive(true);
         }
+
+        //jumping animation
+        if (isGrounded)
+        {
+            timesJumped = 1;
+        }
+            
+        if (Input.GetButtonDown("Jump") && timesJumped < 2)
+        {
+            jump = true; 
+            timesJumped++;
+        }   
+
     }
 
     void FixedUpdate()
@@ -88,9 +106,10 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         //Player movement
         myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
 
-        //jumping animation
-        if (Input.GetAxis("Jump") > 0 && isGrounded) {
+        if (jump)
+        {
             myRigidbody.velocity = new Vector2(0, jumpForce);
+            jump = false; 
         }
     }
 
