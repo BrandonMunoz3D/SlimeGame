@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     // The player's health at the start
-    [SerializeField] private int healthInitial = 5;
+    [SerializeField] public int healthInitial = 5;
 
     // The player's health right now
-    private int healthCurrent;
+    public int healthCurrent;
 
     // Start is called before the first frame update
     void Start()
