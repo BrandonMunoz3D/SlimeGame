@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class Player_FreezeHat : MonoBehaviour
 {
-    [SerializeField] private Sprite IceCrown;
     [SerializeField] private Transform player;
-    //private bool SetActive = false;
 
-    private void Start()
-    {
-        
-    }
-    //void OnTriggerEnter(CircleCollider2D IceCrown)
-   // {
-    //    //Activate the crown
-    //    SetActive = true;
+    //
+    //void OnCollisionEnter(CircleCollider2D other)
+    // {
+    // if(other.CompareTag("FreezeHat"))
+    // {
+    //Puts crown on players head
+    //    transform.localScale = player.localScale;
+    //  }
 
-    //    //Puts crown on players head
-    //    transform.localScale = player.localScale;  
-    //}
 }
+
