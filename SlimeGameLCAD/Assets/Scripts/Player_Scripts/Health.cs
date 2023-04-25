@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float startingHealth;
-    private float currentHealth;
+    [SerializeField] public float startingHealth;
+    public float currentHealth;
 
     private void Awake()
     {
