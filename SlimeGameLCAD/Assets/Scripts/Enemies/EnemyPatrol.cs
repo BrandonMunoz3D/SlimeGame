@@ -65,7 +65,7 @@ public class EnemyPatrol : MonoBehaviour
         if(idleTimer > idleDuration)
             movingLeft = !movingLeft;
     }
-    private void MoveInDirection(int _direction)
+    public void MoveInDirection(int _direction)
     {
         idleTimer = 0;
 
