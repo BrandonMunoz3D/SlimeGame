@@ -16,7 +16,7 @@ public class Player_CowboyHat_SCRIPT : MonoBehaviour
     public GameObject hat;
     public float hatLocation;
 
-    public TextMeshProUGUI restartQ;
+    public GameObject restartQ;
 
     // Start is called before the first frame update
     void Start()
