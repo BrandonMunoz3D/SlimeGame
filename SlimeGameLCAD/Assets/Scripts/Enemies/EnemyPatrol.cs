@@ -12,7 +12,7 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private Transform enemy;
 
     [Header("Movement Parameters")]
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
     private Vector3 initScale;
     private bool movingLeft;
 
@@ -21,7 +21,7 @@ public class EnemyPatrol : MonoBehaviour
     private float idleTimer;
 
     [Header("Enemy Animator")]
-    [SerializeField] private Animator anim;
+    [SerializeField] public Animator anim;
 
     private void Awake()
     {
