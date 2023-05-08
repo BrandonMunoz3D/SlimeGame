@@ -29,6 +29,9 @@ public class Projectile : MonoBehaviour
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("Explode");
+
+        if (collision.tag == "Enemy")
+            Invoke("Frozen", 3.0f);
     }
 
     public void SetDirection(float _direction)
