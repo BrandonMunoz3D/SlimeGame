@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class PlayerSlime_Abilities_SCRIPT : MonoBehaviour
 {
-    public enum SlimeAbility {
-        None,
-        DoubleJump,
-        Freeze, 
-        Stomp
-    }
+    public bool DoubleJump;
 
-    public SlimeAbility CurrentAbility; 
-
-    // Start is called before the first frame update
-    void Start()
+    // Use this for initialization
+    void OnTriggerEnter(Collider col)
     {
+        if (col.tag == "Player")
         
-    }
+            if (DoubleJump)
+            {
+                GameObject.FindWithTag("Player").GetComponent<DoubleJump>().enabled = true;
+                Destroy(gameObject);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            }
+        }
     }
-}

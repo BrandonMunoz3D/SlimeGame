@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class DoubleJump : MonoBehaviour
 {
     public float jumpForce = 5;
     public float groundDistance = 0.5f;
 
-    Rigidbody rigidBody;
+    Rigidbody2D rigidBody;
     bool canDoubleJump;
 
     void Awake()
     {
-        rigidBody = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     bool IsGrounded()
