@@ -8,18 +8,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
 {
+    public Player_CowboyHat_SCRIPT cowboy;
     public Rigidbody2D myRigidbody;
     public Animator anim;
     public GameObject dialoguePanel;
 
     public float speed;
     public float jumpForce;
-    private float movement;
+    public float movement;
 
     //public bool doubleJump;
     public bool jump; 
     public int timesJumped;
-
 
     public bool isGrounded;
  
@@ -37,6 +37,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         anim = GetComponent<Animator>();
         ability = GetComponent<PlayerSlime_Abilities_SCRIPT>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        cowboy = GetComponent<Player_CowboyHat_SCRIPT>();
     }
     // Update is called once per frame
     void Update()
@@ -95,7 +96,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
 
         //jumping animation
-        if (Input.GetAxis("Jump") > 0 && isGrounded)
+        if (!cowboy.hatobtained && Input.GetAxis("Jump") > 0 && isGrounded)
         {
             myRigidbody.velocity = new Vector2(0, jumpForce);
         }

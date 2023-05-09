@@ -2,39 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class doublejump : MonoBehaviour
 {
+    public PlayerSlime_Controls_SCRIPT player;
+    public Player_CowboyHat_SCRIPT cowboy;
     public float jumpForce = 5;
     public float groundDistance = 0.5f;
+    
+    Rigidbody2D rigidBody; 
+    public bool jump = false;
+    public int jumpNumber = 0;
 
-    Rigidbody rigidBody;
-    bool canDoubleJump;
-
-    void Awake()
-    {
-        rigidBody = GetComponent<Rigidbody>();
-    }
-
-    bool IsGrounded()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, groundDistance);
+    void Start()
+    { 
+        player = GetComponent<PlayerSlime_Controls_SCRIPT>();
+        cowboy = GetComponent<Player_CowboyHat_SCRIPT>();
+        rigidBody = GetComponent<Rigidbody2D>(); 
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        //double jump
+        if (player.isGrounded)
         {
-            if (IsGrounded())
+            jumpNumber = 1;
+        }
+
+        if (Input.GetButtonDown("Jump") && jumpNumber < 2)
+        {
+            jump = true;
+            jumpNumber++;
+        }
+    }
+
+    void FixedUpdate()
+    {
+
+        //Player movement
+        player.myRigidbody.velocity = new Vector2(player.speed * player.movement, player.myRigidbody.velocity.y);
+
+        //jumping animation
+        if (cowboy.hatobtained && jump)
+        {
+            Debug.Log("Jump " + jumpNumber);
+            player.myRigidbody.velocity = new Vector2(0, jumpForce);
+            jump = false;
+        }
+    }
+
+    /*
+    void FixedUpdate()
+    {
+        if (cowboy.hatobtained && Input.GetAxis("Jump") > 0)
+        {
+            canDoubleJump = (player.isGrounded) ? true : false; 
+
+            if (!canDoubleJump)
             {
+                Debug.Log("Jump1");
                 rigidBody.velocity = Vector3.up * jumpForce;
-                canDoubleJump = true;
+                
             }
-            else if (canDoubleJump)
+            else    
             {
-                rigidBody.velocity = Vector3.up * jumpForce;
-                canDoubleJump = false;
+                Debug.Log("Jump2");
+                rigidBody.velocity = Vector3.up * jumpForce; 
             }
         }
     }
+    */
 }
