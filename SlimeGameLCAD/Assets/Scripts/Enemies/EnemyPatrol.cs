@@ -12,7 +12,7 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private Transform enemy;
 
     [Header("Movement Parameters")]
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
     private Vector3 initScale;
     private bool movingLeft;
 
@@ -21,7 +21,7 @@ public class EnemyPatrol : MonoBehaviour
     private float idleTimer;
 
     [Header("Enemy Animator")]
-    [SerializeField] private Animator anim;
+    [SerializeField] public Animator anim;
 
     private void Awake()
     {
@@ -72,11 +72,11 @@ public class EnemyPatrol : MonoBehaviour
         //make sure this has the same name as the animation!
         anim.SetBool("moving", true);
 
-        //make enemy face right durection
+        //make enemy face right direction
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, 
             initScale.y, initScale.z);
 
-        //move in that durection
+        //move in that direction
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
             enemy.position.y, enemy.position.z);
     }

@@ -29,6 +29,12 @@ public class Projectile : MonoBehaviour
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("Explode");
+
+        if (GetComponent<EnemyFreeze>().enabled == true && collision.CompareTag("Enemy"))
+            Invoke("Frozen", 1);
+
+        if (GetComponent<EnemyFreeze>().isFrozen == true)
+            Invoke("Unfrozen", 5);
     }
 
     public void SetDirection(float _direction)
