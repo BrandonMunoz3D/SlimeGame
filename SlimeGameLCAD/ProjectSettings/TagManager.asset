@@ -10,6 +10,7 @@ TagManager:
   - FreezeHat
   - powerup
   - Enemy
+  - Boot
   layers:
   - Default
   - TransparentFX
