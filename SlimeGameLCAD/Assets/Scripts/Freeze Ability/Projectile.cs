@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
+        
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -30,7 +31,7 @@ public class Projectile : MonoBehaviour
         boxCollider.enabled = false;
         anim.SetTrigger("Explode");
 
-        if (GetComponent<EnemyFreeze>().enabled == true && collision.CompareTag("Enemy"))
+        if (GetComponent<EnemyFreeze>().enabled == true && collision.tag == "Enemy")
             Invoke("Frozen", 1);
 
         if (GetComponent<EnemyFreeze>().isFrozen == true)

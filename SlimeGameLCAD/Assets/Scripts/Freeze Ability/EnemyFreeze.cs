@@ -27,13 +27,13 @@ public class EnemyFreeze : MonoBehaviour
         rend.color = Color.cyan;
 
         //Stop moving
-        GetComponent<EnemyPatrol>().speed = 0;
+        GetComponentInParent<EnemyPatrol>().speed = 0;
 
         //Dissable damage for that enemy
-        GetComponent<EnemyDamage>().damageAmount = 0;
+        GetComponentInParent<EnemyDamage>().damageAmount = 0;
 
         //Set animation to idle
-        GetComponent<EnemyPatrol>().anim.SetBool("moving", false);
+        GetComponentInParent<EnemyPatrol>().anim.SetBool("moving", false);
 
         isFrozen = true;
     }
@@ -45,13 +45,13 @@ public class EnemyFreeze : MonoBehaviour
         rend.color = Color.white;
 
         //Continue moving
-        GetComponent<EnemyPatrol>().speed = 5;
+        GetComponentInParent<EnemyPatrol>().speed = 5;
 
         //Make damage go back up
-        GetComponent<EnemyDamage>().damageAmount = 2;
+        GetComponentInParent<EnemyDamage>().damageAmount = 2;
 
         //Set animation back to noral
-        GetComponent<EnemyPatrol>().anim.SetBool("moving", true);
+        GetComponentInParent<EnemyPatrol>().anim.SetBool("moving", true);
 
         isFrozen = false;
     }
