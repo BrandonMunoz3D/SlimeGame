@@ -53,7 +53,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         {
             FLip();
         }
-        //lock player movement when speakking
+        //lock player movement when speaking
         if (dialoguePanel.activeInHierarchy)
         {
             movement = 0;
@@ -66,22 +66,6 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         //Set speed
         anim.SetFloat("speed", Mathf.Abs(myRigidbody.velocity.x));
 
-        //Double Jump Ability
-        /*
-         if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.DoubleJump) {
-            // TODO DOUBLE JUMP LOGIC
-        }
-
-        //Freeze Ability
-        if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.Freeze) {
-            // TODO FREEZE LOGIC
-        }
-
-        //Stomp Ability
-        if (ability.CurrentAbility == PlayerSlime_Abilities_SCRIPT.SlimeAbility.Stomp) {
-            // TODO STOMP LOGIC
-        } */
-        
         //restart button
         if (Input.GetKeyDown(KeyCode.Escape))
         {
