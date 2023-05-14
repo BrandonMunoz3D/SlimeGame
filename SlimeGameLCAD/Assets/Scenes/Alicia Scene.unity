@@ -744,7 +744,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684543133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9916955391b2f4e218f25ab739f5fe43, type: 3}
   m_Name: 
@@ -1920,6 +1920,8 @@ MonoBehaviour:
   - Hey there!
   - WHERE IS YOUR HAT SIR?????
   - GRRRRR.....
+  npcName: {fileID: 0}
+  npcPic: {fileID: 0}
   hat: {fileID: 147959866}
   hashat: 0
   wordSpeed: 0.02
@@ -2042,7 +2044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1376410309266192752, guid: 350adfec7a764834099b4cd4f65e5ae3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1376410309266192755, guid: 350adfec7a764834099b4cd4f65e5ae3, type: 3}
       propertyPath: jump

@@ -18,4 +18,4 @@ public class PlayerSlime_Abilities_SCRIPT : MonoBehaviour
 
             }
         }
-    }
+}
