@@ -46,10 +46,6 @@ public class PlayerSlimeBoot : MonoBehaviour
             bootobtained = true;
             //Destroy(collision.gameObject);
             Debug.Log("Owwww");
-
-            //winning animation
-            anim.SetTrigger("won");
-            //create a enw question.. restart with hat?
         }
 
     }
