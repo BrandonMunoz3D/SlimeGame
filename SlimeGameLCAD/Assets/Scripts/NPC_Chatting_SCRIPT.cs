@@ -10,7 +10,10 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public string[] nohatDialogue;
     private int index;
-    
+
+    public TextMeshProUGUI npcName;
+    public Image npcPic;
+
     public GameObject hat;
     public bool hashat;
 
@@ -26,6 +29,7 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
             if (!dialoguePanel.activeInHierarchy)
             {
                 dialoguePanel.SetActive(true);
+
                 //enumerator typing effect
                 StartCoroutine(Typing());
             }
