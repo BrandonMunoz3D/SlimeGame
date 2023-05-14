@@ -53375,7 +53375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &712408347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57573,6 +57573,9 @@ MonoBehaviour:
   - HOWDY PARTNER!
   - Ain't head coverins' just the best
   - Yous and I, we'd make great friends
+  npcName: {fileID: 266003750}
+  npcPic: {fileID: 1603443966}
+  nametext: Wizard Slime
   hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0.02
@@ -57592,14 +57595,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 712408346}
   dialogueText: {fileID: 1962868575}
-  npcName: {fileID: 0}
-  npcPic: {fileID: 1718137571}
   nohatDialogue:
   - ohhhh...
   - ohhh poooor souulll... a darkness shrouds you..
   - you must find yourself a head covering of sorts..
   - to free yourself from the forces of darkness....
   - UNTIL THEN YOU WILL NEVER BE HAPPY
+  npcName: {fileID: 266003750}
+  npcPic: {fileID: 1603443966}
+  nametext: Wizard Slime
   hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0.02
@@ -61846,6 +61850,9 @@ MonoBehaviour:
   hatDialogue:
   - 'Hi there friend! Cool hat!! '
   - I'm going to become a Pokemon Master!
+  npcName: {fileID: 266003750}
+  npcPic: {fileID: 711517151}
+  nametext: Ash Slime
   hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0.02
@@ -61865,11 +61872,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 712408346}
   dialogueText: {fileID: 1962868575}
-  npcName: {fileID: 0}
-  npcPic: {fileID: 0}
   nohatDialogue:
   - Hi there friend! Where's your hat?
   - You can't be thinking of starting a journey without a hat??
+  npcName: {fileID: 266003750}
+  npcPic: {fileID: 711517151}
+  nametext: Ash Slime
   hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0.02
@@ -74265,6 +74273,9 @@ MonoBehaviour:
   hatDialogue:
   - HEY BATTER BATTER BATTER
   - COOL HAT!! HOWDY PARTNER!
+  npcName: {fileID: 266003750}
+  npcPic: {fileID: 1824576546}
+  nametext: Baseball Slime
   hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0.02
@@ -74284,13 +74295,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 712408346}
   dialogueText: {fileID: 1962868575}
-  npcName: {fileID: 0}
-  npcPic: {fileID: 0}
   nohatDialogue:
   - HEY BATTER BATTER BATTER
   - BATTERS UP!!
   - 'Where''s your hat? '
   - I wear my lucky baseball hat to protect my head while playing!
+  npcName: {fileID: 266003750}
+  npcPic: {fileID: 1824576546}
+  nametext: Baseball Slime
   hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0.02

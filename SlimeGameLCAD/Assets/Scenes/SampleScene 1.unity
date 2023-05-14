@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &49212572
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cap Slime
+  m_text: Slime Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1653,6 +1653,9 @@ MonoBehaviour:
   - Hey there!
   - WHERE IS YOUR HAT SIR?????
   - GRRRRR.....
+  npcName: {fileID: 1306211863}
+  npcPic: {fileID: 49212573}
+  nametext: Cap Slime
   hat: {fileID: 147959866}
   hashat: 0
   wordSpeed: 0.02
@@ -1697,7 +1700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2091549454
 RectTransform:
   m_ObjectHideFlags: 0

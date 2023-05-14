@@ -13,13 +13,13 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
 
     public TextMeshProUGUI npcName;
     public Image npcPic;
+    public string nametext;
 
     public GameObject hat;
     public bool hashat;
 
     public float wordSpeed;
     public bool proximityNpc;
-
 
     // Update is called once per frame
     void Update()
@@ -29,7 +29,8 @@ public class NPC_Chatting_SCRIPT : MonoBehaviour
             if (!dialoguePanel.activeInHierarchy)
             {
                 dialoguePanel.SetActive(true);
-
+                npcPic.gameObject.SetActive(true);
+                npcName.text = nametext;
                 //enumerator typing effect
                 StartCoroutine(Typing());
             }

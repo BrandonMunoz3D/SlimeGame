@@ -11,6 +11,10 @@ public class HatObtained_NPC_SCRIPT : MonoBehaviour
     private int index;
     public string[] hatDialogue;
 
+    public TextMeshProUGUI npcName;
+    public Image npcPic;
+    public string nametext;
+
     public GameObject hat;
     public bool hashat;
 
@@ -27,6 +31,8 @@ public class HatObtained_NPC_SCRIPT : MonoBehaviour
             if (!dialoguePanel.activeInHierarchy)
             {
                 dialoguePanel.SetActive(true);
+                npcPic.gameObject.SetActive(true);
+                npcName.text = nametext;
                 //enumerator typing effect
                 StartCoroutine(Typing());
             }
@@ -41,6 +47,7 @@ public class HatObtained_NPC_SCRIPT : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        npcPic.gameObject.SetActive(false);
     }
 
     //Typing effect
