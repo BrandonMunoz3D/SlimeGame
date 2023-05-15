@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Stalagmite_Script : MonoBehaviour
 {
-    [SerializeField] private GameObject stalagmite;
-    [SerializeField] private Transform stalagmiteSpawnPosition;
-
     private Animator anim;
     private Rigidbody2D rigidBody;
 
-    [SerializeField] private int range;
-    [SerializeField] private float colliderDistance;
+    [SerializeField] private float speed;
+    private float direction;
 
     [Header("Collider Parameters")]
     [SerializeField] private int damageAmount;
@@ -19,6 +16,8 @@ public class Stalagmite_Script : MonoBehaviour
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
+
+    public bool hit;
 
     PlayerHealth healthCurrent;
 
@@ -32,36 +31,29 @@ public class Stalagmite_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InvokeRepeating("Shoot", 5.0f, 5.0f);
-    }
-    private bool PlayerInSight()
-    {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-          new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
-          0, Vector2.left, 0, playerLayer);
+        if (hit) return;
+        float movementspeed = speed * Time.deltaTime * direction;
+        transform.Translate(movementspeed, 0, 0);
 
-        if (hit.collider != null)
-            healthCurrent = hit.transform.GetComponent<PlayerHealth>();
-        return hit.collider != null;
-    }
-    void Shoot()
-    {
-        Instantiate(stalagmite, stalagmiteSpawnPosition.transform);
+        InvokeRepeating("DropStalagmite", 5.0f, 5.0f);
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.y * colliderDistance,
-            new Vector3(boxCollider.bounds.size.y * range, boxCollider.bounds.size.x));
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        hit = true;
         boxCollider.enabled = false;
         rigidBody.isKinematic = true;
         anim.SetTrigger("explode");
-        Destroy(stalagmite, 2);
+        if (collision.tag == "Player")
+        {
+            GetComponent<PlayerHealth>().TakeDamage(damageAmount);
+        }
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 
 }
