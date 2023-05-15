@@ -11,6 +11,7 @@ TagManager:
   - powerup
   - Enemy
   - Boot
+  - Camera
   layers:
   - Default
   - TransparentFX

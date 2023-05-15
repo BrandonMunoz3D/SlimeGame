@@ -42,13 +42,13 @@ public class TumbleMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
         
     }
-    /*void OnBecameInvisible()
+    void OnBecameInvisible()
     {
         Destroy(gameObject, 4);
-    }*/
+    }
 
 }
