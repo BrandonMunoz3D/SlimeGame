@@ -31,13 +31,11 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
 
     public static Vector2 lastCheckPointPos;
 
-    PlayerSlime_Abilities_SCRIPT ability;
 
     // Start is called before the first frame update
     void Start()
     { 
         anim = GetComponent<Animator>();
-        ability = GetComponent<PlayerSlime_Abilities_SCRIPT>();
         myRigidbody = GetComponent<Rigidbody2D>();
         cowboy = GetComponent<Player_CowboyHat_SCRIPT>();
     }
@@ -110,6 +108,14 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     {
         Debug.Log("not Restarting");
         restartMenu.SetActive(false);
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Death")
+        {
+            Debug.Log("die");
+            Restart();
+        }
     }
 
 }
