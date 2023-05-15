@@ -39,27 +39,28 @@ public class PlayerSlime_Slam : MonoBehaviour
         }
     }
 
-    //Collided object that is destroyed is the one with the Layer "Slam"
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.gameObject);
         if (other.gameObject.layer == LayerMask.NameToLayer("Slam"))
         {
             Debug.Log("Object collided with Slam collider.");
             collidedObject = other.gameObject;
         }
     }
-
     //Destroy collided object mentioned earlier
     private void DestroyCollidedObject()
     {
         if (collidedObject != null)
         {
-            Debug.Log("Destroyed collided object.");
+
+            //collidedObject.GetComponent<Collider>().enabled = false;
             Destroy(collidedObject, destroyDelay);
             collidedObject = null;
+            Debug.Log("Destroyed collided object.");
         }
     }
-    
+    //makes the triggered ability hat a child of the slime. 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Boot"))
@@ -71,6 +72,7 @@ public class PlayerSlime_Slam : MonoBehaviour
             Debug.Log("Press Q to break weak spots in the ground");
             if (bootObtained == true)
             {
+                //disable hover animation of ability item
                 collision.GetComponent<ItemHover>().enabled = false;
                 //makes boot child of regularSlime
                 collision.transform.parent = regularSlime.transform;
@@ -80,6 +82,7 @@ public class PlayerSlime_Slam : MonoBehaviour
 
         }
     }
+    //nullifies ability when pass through empty obbject
     private void OnTriggerStay2D(Collider2D collider2)
     {
         if (collider2.gameObject.CompareTag("abilityNull"))
