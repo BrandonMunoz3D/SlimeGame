@@ -7,7 +7,7 @@ public class StalagmiteSpawn : MonoBehaviour
     [SerializeField] private Transform StalagmiteSpawnPoint;
     [SerializeField] private GameObject[] stalagmites;
 
-    private void DropStalagmite()
+    public void DropStalagmite()
     {
         stalagmites[0].transform.position = StalagmiteSpawnPoint.position;
 
