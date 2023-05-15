@@ -29,6 +29,8 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
 
     public GameObject restartMenu;
 
+    public static Vector2 lastCheckPointPos;
+
     PlayerSlime_Abilities_SCRIPT ability;
 
     // Start is called before the first frame update
@@ -98,9 +100,10 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     public void Restart()
     {
         //how to play restart animation?
-        anim.Play("restart");
+        //anim.Play("restart");
         Debug.Log("Restarting");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        transform.position = lastCheckPointPos;
         restartMenu.SetActive(false);
     }
     public void noRestart()
