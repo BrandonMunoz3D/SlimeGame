@@ -2691,6 +2691,7 @@ GameObject:
   - component: {fileID: 248091468}
   - component: {fileID: 248091472}
   - component: {fileID: 248091471}
+  - component: {fileID: 248091473}
   m_Layer: 0
   m_Name: IntroSlime-Sheet_0
   m_TagString: Untagged
@@ -2795,15 +2796,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920b3f84807483c4486962d68d5117e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
+  dialoguePanel: {fileID: 712408346}
+  dialogueText: {fileID: 1962868575}
   nohatDialogue:
   - mama mia!
   - Where's your hat monsieur?
   npcName: {fileID: 266003750}
   npcPic: {fileID: 1910883872}
   nametext: ChefSlime
-  hat: {fileID: 0}
+  hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0
   proximityNpc: 0
@@ -2819,19 +2820,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4486e115be5c4ab24d884c498c783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
+  dialoguePanel: {fileID: 712408346}
+  dialogueText: {fileID: 1962868575}
   hatDialogue:
   - HOWDY MONSIEUR
   - WHAT A BEAUTIFUL HAT YOU HAVE
   npcName: {fileID: 266003750}
   npcPic: {fileID: 1910883872}
   nametext: ChefSlime
-  hat: {fileID: 0}
+  hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0
   proximityNpc: 0
   Slime: {fileID: 0}
+--- !u!70 &248091473
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248091467}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05090332, y: -0.38822985}
+  m_Size: {x: 0.8289795, y: 1.2235403}
+  m_Direction: 0
 --- !u!1 &254092304
 GameObject:
   m_ObjectHideFlags: 0
@@ -53925,6 +53942,7 @@ GameObject:
   - component: {fileID: 659323227}
   - component: {fileID: 659323231}
   - component: {fileID: 659323230}
+  - component: {fileID: 659323232}
   m_Layer: 0
   m_Name: NPC-Sheet_0
   m_TagString: Untagged
@@ -54029,14 +54047,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4486e115be5c4ab24d884c498c783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
+  dialoguePanel: {fileID: 712408346}
+  dialogueText: {fileID: 1962868575}
   hatDialogue:
   - YEEHAW PARDNER!
   npcName: {fileID: 266003750}
   npcPic: {fileID: 1162983665}
   nametext: Cap Slime
-  hat: {fileID: 0}
+  hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0
   proximityNpc: 0
@@ -54053,17 +54071,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920b3f84807483c4486962d68d5117e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
+  dialoguePanel: {fileID: 712408346}
+  dialogueText: {fileID: 1962868575}
   nohatDialogue:
   - Aw darn, you would look so cool if you had a hat
   npcName: {fileID: 266003750}
   npcPic: {fileID: 1162983665}
   nametext: CapSlime
-  hat: {fileID: 0}
+  hat: {fileID: 1887006539}
   hashat: 0
   wordSpeed: 0
   proximityNpc: 0
+--- !u!70 &659323232
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659323226}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.019088745, y: 0}
+  m_Size: {x: 0.6817932, y: 1}
+  m_Direction: 0
 --- !u!1 &685124675
 GameObject:
   m_ObjectHideFlags: 0
