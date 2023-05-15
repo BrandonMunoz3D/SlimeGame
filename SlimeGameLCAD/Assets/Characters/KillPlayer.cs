@@ -6,8 +6,9 @@ public class KillPlayer : MonoBehaviour {
 
 	public GameObject player;
 	public Transform respawnPoint;
-	//Start is called before the first frame update
-	void start()
+    public Transform respawnPoint2;
+    //Start is called before the first frame update
+    void start()
     {
 
     }
@@ -22,6 +23,10 @@ public class KillPlayer : MonoBehaviour {
 		if(other.gameObject.CompareTag("Player"))
         {
             player.transform.position = respawnPoint.position;
+        }
+        else if(other.gameObject.CompareTag("Player"))
+        {
+            player.transform.position = respawnPoint2.position;
         }
 	}
 }

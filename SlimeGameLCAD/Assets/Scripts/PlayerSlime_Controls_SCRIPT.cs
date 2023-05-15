@@ -29,13 +29,13 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
 
     public GameObject restartMenu;
 
-    PlayerSlime_Abilities_SCRIPT ability;
+    public static Vector2 lastCheckPointPos;
+
 
     // Start is called before the first frame update
     void Start()
     { 
         anim = GetComponent<Animator>();
-        ability = GetComponent<PlayerSlime_Abilities_SCRIPT>();
         myRigidbody = GetComponent<Rigidbody2D>();
         cowboy = GetComponent<Player_CowboyHat_SCRIPT>();
     }
@@ -98,15 +98,24 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     public void Restart()
     {
         //how to play restart animation?
-        anim.Play("restart");
+        //anim.Play("restart");
         Debug.Log("Restarting");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        transform.position = lastCheckPointPos;
         restartMenu.SetActive(false);
     }
     public void noRestart()
     {
         Debug.Log("not Restarting");
         restartMenu.SetActive(false);
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Death")
+        {
+            Debug.Log("die");
+            Restart();
+        }
     }
 
 }

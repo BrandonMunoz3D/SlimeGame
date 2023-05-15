@@ -11,6 +11,12 @@ TagManager:
   - powerup
   - Enemy
   - Boot
+  - Camera
+  - Death
+  - Ice Crown
+  - Wings
+  - Elsahair
+  - abilityNull
   - Projectile
   layers:
   - Default
