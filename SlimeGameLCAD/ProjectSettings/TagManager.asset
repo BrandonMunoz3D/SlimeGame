@@ -4,30 +4,25 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
-  - CowboyHat
-  - NPC
-  - FreezeHat
-  - powerup
-  - Enemy
+  - abilityNull
+  - Wings
   - Boot
+  - Ice Crown
   - Camera
   - Death
-  - Ice Crown
-  - Wings
+  - CowboyHat
+  - NPC
   - Elsahair
-  - abilityNull
-  - Projectile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
+  - overlay
+  - Player
   - NPC
-  - Slam
-  - player
   - 
   - 
   - 

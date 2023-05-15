@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
 {
     public Player_CowboyHat_SCRIPT cowboy;
+    public doublejump doublejump;
     public Rigidbody2D myRigidbody;
     public Animator anim;
     public GameObject dialoguePanel;
@@ -38,6 +39,10 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         cowboy = GetComponent<Player_CowboyHat_SCRIPT>();
+        doublejump = GetComponent<doublejump>();
+        Debug.Log("WASD to move");
+        Debug.Log("SPACE to jump");
+        Debug.Log("E to speak");
     }
     // Update is called once per frame
     void Update()
@@ -80,7 +85,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         myRigidbody.velocity = new Vector2(speed * movement, myRigidbody.velocity.y);
 
         //jumping animation
-        if (!cowboy.hatobtained && Input.GetAxis("Jump") > 0 && isGrounded)
+        if (!cowboy.hatobtained && !doublejump.wingObtained && Input.GetAxis("Jump") > 0 && isGrounded)
         {
             myRigidbody.velocity = new Vector2(0, jumpForce);
         }
@@ -113,7 +118,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
     {
         if(other.gameObject.tag == "Death")
         {
-            Debug.Log("die");
+            Debug.Log("YOU DIED");
             Restart();
         }
     }
