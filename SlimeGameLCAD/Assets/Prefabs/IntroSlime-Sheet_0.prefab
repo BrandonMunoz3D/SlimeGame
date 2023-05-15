@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5192905069685280529
+--- !u!1 &7350096639024494771
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5192905069685280535}
-  - component: {fileID: 5192905069685280528}
-  - component: {fileID: 5192905069685280534}
-  - component: {fileID: 5192905069685280533}
-  - component: {fileID: 441290141900673162}
-  m_Layer: 0
-  m_Name: hat
-  m_TagString: CowboyHat
+  - component: {fileID: 7350096639024494774}
+  - component: {fileID: 7350096639024494773}
+  - component: {fileID: 7350096639024494772}
+  - component: {fileID: 7350096639024494775}
+  - component: {fileID: 7350096639024494760}
+  - component: {fileID: 7350096639024494761}
+  m_Layer: 6
+  m_Name: IntroSlime-Sheet_0
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5192905069685280535
+--- !u!4 &7350096639024494774
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5192905069685280529}
+  m_GameObject: {fileID: 7350096639024494771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 382, y: 15, z: 0}
+  m_LocalPosition: {x: 294.40292, y: 7.459292, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5192905069685280528
+--- !u!212 &7350096639024494773
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5192905069685280529}
+  m_GameObject: {fileID: 7350096639024494771}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,64 +74,100 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -1836120431684336037, guid: e39b01c2c1ad2c84c941930fb46198e0, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7944550155819521149, guid: 9f093c376d7a0824291ef41e77969602, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5192905069685280534
+--- !u!95 &7350096639024494772
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5192905069685280529}
+  m_GameObject: {fileID: 7350096639024494771}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2bc3c2525b706de44ac24f01b962250e, type: 2}
+  m_Controller: {fileID: 9100000, guid: a9b9533e1a0594045b442c2a2281addb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!58 &5192905069685280533
-CircleCollider2D:
+--- !u!114 &7350096639024494775
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5192905069685280529}
+  m_GameObject: {fileID: 7350096639024494771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920b3f84807483c4486962d68d5117e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  nohatDialogue:
+  - mama mia!
+  - Where's your hat monsieur?
+  npcName: {fileID: 0}
+  npcPic: {fileID: 0}
+  nametext: ChefSlime
+  hat: {fileID: 0}
+  hashat: 0
+  wordSpeed: 0
+  proximityNpc: 0
+--- !u!114 &7350096639024494760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7350096639024494771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb4486e115be5c4ab24d884c498c783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  hatDialogue:
+  - HOWDY MONSIEUR
+  - WHAT A BEAUTIFUL HAT YOU HAVE
+  npcName: {fileID: 0}
+  npcPic: {fileID: 0}
+  nametext: ChefSlime
+  hat: {fileID: 0}
+  hashat: 0
+  wordSpeed: 0
+  proximityNpc: 0
+  Slime: {fileID: 0}
+--- !u!70 &7350096639024494761
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7350096639024494771}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.375
---- !u!114 &441290141900673162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5192905069685280529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f12a2bd080558b49a5dcc583c396480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DoubleJump: 0
+  m_Offset: {x: -0.05090332, y: -0.38822985}
+  m_Size: {x: 0.8289795, y: 1.2235403}
+  m_Direction: 0

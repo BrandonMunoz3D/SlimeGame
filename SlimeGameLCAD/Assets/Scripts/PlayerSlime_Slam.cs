@@ -4,19 +4,37 @@ using UnityEngine;
 
 public class PlayerSlime_Slam : MonoBehaviour
 {
+    public PlayerSlime_Controls_SCRIPT player;
+    public Player_CowboyHat_SCRIPT cowboy;
+    public ItemHover hover;
+
+    public bool bootObtained = false;
+    public GameObject regularSlime;
+    public float bootLocation;
+
     public Transform collisionDetector;
     public KeyCode activateKey = KeyCode.Q;
     public float destroyDelay = 2.0f;
 
     private GameObject collidedObject;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GetComponent<PlayerSlime_Controls_SCRIPT>();
+        cowboy = GetComponent<Player_CowboyHat_SCRIPT>();
+        hover = GetComponent<ItemHover>();
+    }
+
     //On Key Down, Get animatator
     private void Update()
     {
-        if (Input.GetKeyDown(activateKey))
+        if (Input.GetKeyDown(activateKey) && bootObtained)
         {
             Debug.Log("Slam Animation Play");
             GetComponent<Animator>().SetTrigger("Slam");
+            //perhaps this line below, but needs to exit afterwards.
+            ////GetComponent<Animator>().Play("Slam");
             DestroyCollidedObject();
         }
     }
@@ -39,6 +57,46 @@ public class PlayerSlime_Slam : MonoBehaviour
             Debug.Log("Destroyed collided object.");
             Destroy(collidedObject, destroyDelay);
             collidedObject = null;
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Boot"))
+        {
+            bootObtained = true;
+            //Destroy(collision.gameObject);
+            Debug.Log("Owwww");
+            Debug.Log("Suddenly... you feel HEAVY");
+            Debug.Log("Press Q to break weak spots in the ground");
+            if (bootObtained == true)
+            {
+                collision.GetComponent<ItemHover>().enabled = false;
+                //makes boot child of regularSlime
+                collision.transform.parent = regularSlime.transform;
+                //recenter on Slime 
+                collision.transform.localPosition = new Vector3(0, bootLocation, 0);
+            }
+
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collider2)
+    {
+        if (collider2.gameObject.CompareTag("abilityNull"))
+        {
+            if (bootObtained == true)
+            {
+                bootObtained = false;
+                Debug.Log("The boot you found earlier suddenly flops down");
+                Debug.Log("you can no longer break the ground :(");
+
+                foreach (Transform child in regularSlime.transform)
+                {
+                    Destroy(child.gameObject);
+                }
+                //collision.GetComponent<ItemHover>().enabled = true;
+            }
+
         }
     }
 }
