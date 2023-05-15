@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
     private float direction;
-    private bool hit;
+    public bool hit;
 
     private BoxCollider2D boxCollider;
     private Animator anim;
@@ -31,11 +31,12 @@ public class Projectile : MonoBehaviour
         boxCollider.enabled = false;
         anim.SetTrigger("Explode");
 
-        if (GetComponent<EnemyFreeze>().enabled == true && collision.tag == "Enemy")
-            Invoke("Frozen", 1);
+        //if (GetComponent<EnemyFreeze>().isFrozen == true)
+        //Invoke("Unfrozen", 5);
+ //make enemyHit the thing projectile is triggering with
+ //
+ //enemyHit = collision.gameObject;
 
-        if (GetComponent<EnemyFreeze>().isFrozen == true)
-            Invoke("Unfrozen", 5);
     }
 
     public void SetDirection(float _direction)

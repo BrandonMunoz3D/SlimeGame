@@ -11,6 +11,7 @@ TagManager:
   - powerup
   - Enemy
   - Boot
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - NPC
   - Slam
-  - 
+  - player
   - 
   - 
   - 

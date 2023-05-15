@@ -17,31 +17,38 @@ public class EnemyFreeze : MonoBehaviour
     {
         enemyDamage = GetComponent<EnemyDamage>();
         anim = GetComponent<Animator>();
-        
-        isFrozen = false;
+        rend = GetComponent<SpriteRenderer>();
+    }
+    private void Update()
+    {
+        isFrozen = true;
+        //Frozen();
+        //Debug.Log("freezing");
     }
     public void Frozen()
     {
+        Debug.Log("blue");
         //Change color to cyan
-        rend = GetComponent<SpriteRenderer>();
         rend.color = Color.cyan;
-
-        //Stop moving
-        GetComponentInParent<EnemyPatrol>().speed = 0;
-
-        //Dissable damage for that enemy
-        GetComponentInParent<EnemyDamage>().damageAmount = 0;
 
         //Set animation to idle
         GetComponentInParent<EnemyPatrol>().anim.SetBool("moving", false);
 
+        //Stop moving
+        GetComponentInParent<MeleeEnemy>().enemyPatrol.enabled = false;
+
+        //Dissable damage for that enemy
+        GetComponentInParent<EnemyDamage>().damageAmount = 0;
+
+
         isFrozen = true;
+
+        Invoke("Unfrozen", 5);
     }
 
     public void Unfrozen()
     {
         //Return to normal color
-        rend = GetComponent<SpriteRenderer>();
         rend.color = Color.white;
 
         //Continue moving
@@ -56,11 +63,5 @@ public class EnemyFreeze : MonoBehaviour
         isFrozen = false;
     }
 
-    //Instead of using a timer method I am using Invoke on the projectile script :-) vvv
-    
-    //if (GetComponent<EnemyFreeze>().enabled = true && collision.tag == "Enemy")
-        //Invoke("Frozen", 1);
 
-        //if (GetComponent<EnemyFreeze>().isFrozen == true)
-            //Invoke("Unfrozen", 5);
 }

@@ -10,18 +10,22 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private float colliderDistance;
 
     [Header("Collider Parameters")]
-    [SerializeField] private int damage;
+    [SerializeField] private int damageAmount;
     [SerializeField] private BoxCollider2D boxCollider;
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    [Header("Frozen Parameters")]
+    [SerializeField] public SpriteRenderer rend;
+    public bool isFrozen;
+
     //References
-    private Health playerHealth;
+    PlayerHealth healthCurrent;
     private Animator anim;
 
-    private EnemyPatrol enemyPatrol;
+    public EnemyPatrol enemyPatrol;
 
     private void Awake()
     {
@@ -32,7 +36,7 @@ public class MeleeEnemy : MonoBehaviour
     {
         cooldownTimer += Time.deltaTime;
 
-        //Attack only when player in sight?
+        //Attack only when player in sight
         if (PlayerInSight())
         {
             if (cooldownTimer >= attackCooldown)
@@ -44,6 +48,11 @@ public class MeleeEnemy : MonoBehaviour
 
         if (enemyPatrol != null)
             enemyPatrol.enabled = !PlayerInSight();
+
+        if (isFrozen == true)
+        {
+            Invoke("Unfrozen", 5.0f);
+        }
     }
 
     private bool PlayerInSight()
@@ -53,7 +62,7 @@ public class MeleeEnemy : MonoBehaviour
           0, Vector2.left,0, playerLayer);
 
         if (hit.collider != null)
-            playerHealth = hit.transform.GetComponent<Health>();
+            healthCurrent = hit.transform.GetComponent<PlayerHealth>();
         return hit.collider != null;
     }
 
@@ -64,11 +73,48 @@ public class MeleeEnemy : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Projectile")
+        {
+            Frozen();
+        }
+    }
+
     private void DamagePlayer()
     {
         //If player still in range damage him
         if (PlayerInSight())
-            playerHealth.TakeDamage(damage);
+            healthCurrent.TakeDamage(damageAmount);
         
+    }
+    public void Frozen()
+    {
+        isFrozen = true;
+
+        Debug.Log("Change color to cyan");
+        rend.color = Color.cyan;
+
+        Debug.Log("Dissable damage for that enemy");
+        damageAmount = 0;
+
+        Debug.Log("Stop Moving");
+        GetComponentInParent<EnemyPatrol>().speed = 0;
+
+    }
+
+    public void Unfrozen()
+    {
+        isFrozen = false;
+
+        Debug.Log("Unfrozen");
+        //Return to normal color
+        rend.color = Color.white;
+
+        Debug.Log("Return damage");
+        damageAmount = 2;
+
+        Debug.Log("Resume moving");
+        GetComponentInParent<EnemyPatrol>().speed = 1;
     }
 }
