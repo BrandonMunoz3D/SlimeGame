@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Boot
   - Camera
+  - Death
   layers:
   - Default
   - TransparentFX

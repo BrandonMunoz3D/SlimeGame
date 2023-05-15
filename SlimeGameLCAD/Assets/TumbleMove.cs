@@ -11,16 +11,41 @@ public class TumbleMove : MonoBehaviour
     float rotateSpeed;
     [SerializeField]
     Vector3 rotationDirection = new Vector3();
-    
-    // Update is called once per frame
+    bool trigger;
+    //Update is called once per frame
     void Update()
+    {
+        if(trigger == true)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            transform.Rotate(rotateSpeed * rotationDirection * Time.deltaTime);
+        }
+    }
+       
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Camera"))
+        {
+            trigger = true;
+            Movement();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Camera"))
+        {
+            OnBecameInvisible();
+        }
+    }
+    void Movement()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         transform.Rotate(rotateSpeed * rotationDirection * Time.deltaTime);
     }
     void OnBecameInvisible()
     {
-        Destroy(gameObject, 4);
+        Destroy(gameObject);
     }
 
 }
