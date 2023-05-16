@@ -44,6 +44,7 @@ public class PlayerSlime_Controls_SCRIPT : MonoBehaviour
         Debug.Log("SPACE to jump");
         Debug.Log("E to speak");
         Debug.Log("ESC to restart");
+        Debug.Log("M to hide console");
     }
     // Update is called once per frame
     void Update()

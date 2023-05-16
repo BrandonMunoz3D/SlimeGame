@@ -34,8 +34,6 @@ public class PlayerSlime_Slam : MonoBehaviour
         {
             Debug.Log("Slam Animation Play");
             GetComponent<Animator>().SetTrigger("Slam");
-            //perhaps this line below, but needs to exit afterwards.
-            ////GetComponent<Animator>().Play("Slam");
             DestroyCollidedObject();
         }
     }
