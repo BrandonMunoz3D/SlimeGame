@@ -17,6 +17,7 @@ public class PlayerSlime_Slam : MonoBehaviour
     public float destroyDelay = 2.0f;
 
     private GameObject collidedObject;
+    private GameObject boot;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +78,7 @@ public class PlayerSlime_Slam : MonoBehaviour
                 collision.transform.parent = regularSlime.transform;
                 //recenter on Slime 
                 collision.transform.localPosition = new Vector3(0, bootLocation, 0);
+                boot = collision.gameObject;
             }
 
         }
@@ -92,9 +94,10 @@ public class PlayerSlime_Slam : MonoBehaviour
                 Debug.Log("The boot you found earlier suddenly flops down");
                 Debug.Log("you can no longer break the ground :(");
 
-                foreach (Transform child in regularSlime.transform)
+
+                boot = transform.GetChild(2).gameObject;
                 {
-                    Destroy(child.gameObject);
+                    Destroy(boot.gameObject);
                 }
                 //collision.GetComponent<ItemHover>().enabled = true;
             }

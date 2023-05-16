@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject regularSlime;
     public float hairLocation;
     public float horizontal;
+    private GameObject elsaHair;
 
     private void Awake()
     {
@@ -68,6 +69,7 @@ public class PlayerAttack : MonoBehaviour
                 collision.transform.parent = regularSlime.transform;
                 //recenter on Slime 
                 collision.transform.localPosition = new Vector3(horizontal, hairLocation, 0);
+                elsaHair = collision.gameObject;
             }
         }
         if (collision.gameObject.CompareTag("Ice Crown"))
@@ -88,9 +90,9 @@ public class PlayerAttack : MonoBehaviour
                 Debug.Log("You let it go");
                 Debug.Log("you can not shoot ice :(");
 
-                foreach (Transform child in regularSlime.transform)
+                elsaHair = transform.GetChild(2).gameObject;
                 {
-                    Destroy(child.gameObject);
+                    Destroy(elsaHair.gameObject);
                 }
                 //collision.GetComponent<ItemHover>().enabled = true;
             }

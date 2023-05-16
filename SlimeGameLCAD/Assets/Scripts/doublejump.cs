@@ -20,6 +20,7 @@ public class doublejump : MonoBehaviour
     public GameObject regularSlime;
     public bool wingObtained;
     public float wingLocation;
+    private GameObject wing;
 
     void Start()
     {
@@ -73,6 +74,7 @@ public class doublejump : MonoBehaviour
                 collision.GetComponent<ItemHover>().enabled = false;
                 collision.transform.parent = regularSlime.transform;
                 collision.transform.localPosition = new Vector3(0, wingLocation, 0);
+                wing = collision.gameObject;
             }
 
         }
@@ -90,10 +92,15 @@ public class doublejump : MonoBehaviour
                 Debug.Log("you feel heavier as the wind dies down ");
                 Debug.Log("you can no longer double jump :(");
 
-                foreach (Transform child in regularSlime.transform)
+                wing = transform.GetChild(2).gameObject;
+                {
+                    Destroy(wing.gameObject);
+                }
+                /*foreach (Transform child in regularSlime.transform)
                 {
                     Destroy(child.gameObject);
-                }
+                    
+                }*/
                 //collision.GetComponent<ItemHover>().enabled = true;
             }
 
