@@ -2068,6 +2068,63 @@ MonoBehaviour:
   SlimePlayer: {fileID: 1044584159}
   totalHealthBar: {fileID: 7072892002512885321}
   currentHealthBar: {fileID: 7072892001528110071}
+--- !u!1001 &3922906304332114520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.53035295
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5740287
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -368.88104
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859123104399362909, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135936681826680923, guid: 30d029e63025128469a319857a4fb84b, type: 3}
+      propertyPath: m_Name
+      value: Background Music
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30d029e63025128469a319857a4fb84b, type: 3}
 --- !u!1 &7072892000888581584
 GameObject:
   m_ObjectHideFlags: 0
