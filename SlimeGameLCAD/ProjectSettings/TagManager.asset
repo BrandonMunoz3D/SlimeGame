@@ -15,6 +15,7 @@ TagManager:
   - Elsahair
   - Enemy
   - Ground
+  - Projectile
   layers:
   - Default
   - TransparentFX
