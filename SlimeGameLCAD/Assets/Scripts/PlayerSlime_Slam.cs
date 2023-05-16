@@ -41,7 +41,6 @@ public class PlayerSlime_Slam : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject);
         if (other.gameObject.layer == LayerMask.NameToLayer("Slam"))
         {
             Debug.Log("Object collided with Slam collider.");

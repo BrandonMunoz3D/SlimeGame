@@ -84,9 +84,9 @@ public class PlayerAttack : MonoBehaviour
             if (hairObtained == true)
             {
                 hairObtained = false;
-                Debug.Log("The hair catches a gust of wind and flies away~");
+                Debug.Log("Your hair catches a gust of wind and flies away~");
                 Debug.Log("You let it go");
-                Debug.Log("you can no shoot ice :(");
+                Debug.Log("you can not shoot ice :(");
 
                 foreach (Transform child in regularSlime.transform)
                 {
